@@ -1,25 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import IndiaDashboard from './components/IndiaDashboard';
+import WorldDetails from './components/WorldDetails';
+import IndiaDetails from './components/IndiaDetails';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path='/'>
+          <>
+            <IndiaDashboard />
+            <IndiaDetails />
+          </>
+        </Route>
+        <Route path='/india'>
+          <>
+            <IndiaDashboard />
+            <IndiaDetails />
+          </>
+        </Route>
+        <Route path='/world'>
+          <WorldDetails />
+        </Route>
+      </Switch>
+    </Router >
+
   );
 }
 
 export default App;
+
+//Header
+//India Page
+    //India DAshboard
+    //State counts
+//World Page
