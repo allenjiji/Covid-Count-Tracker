@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import IndiaDashboard from './components/IndiaDashboard';
 import WorldDetails from './components/WorldDetails';
 import IndiaDetails from './components/IndiaDetails';

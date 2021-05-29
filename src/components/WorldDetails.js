@@ -8,7 +8,7 @@ function WorldDetails() {
         axios.get('https://corona.lmao.ninja/v2/countries').then(
             (response) => {
                 setData(response.data)
-                console.log(response.data[0]);
+                // console.log(response.data[0]);
             }
         )
 
